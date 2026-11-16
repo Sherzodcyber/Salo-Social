@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="uz"><head>
+<meta charset="utf-8"/>
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=40486abe-212a-4d2b-9d4c-570a5a50b3fe
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>Salo Social</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Inter Font -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-container": "#ff4c83",
+            "on-secondary-fixed-variant": "#6a1c9b",
+            "tertiary-container": "#ff5546",
+            "surface-container-low": "#141b2b",
+            "on-surface-variant": "#e2bec3",
+            "tertiary-fixed-dim": "#ffb4aa",
+            "surface-container": "#191f2f",
+            "secondary-fixed": "#f4daff",
+            "on-tertiary": "#690003",
+            "on-secondary-fixed": "#2f004c",
+            "secondary": "#e3b5ff",
+            "on-tertiary-fixed": "#410001",
+            "error-container": "#93000a",
+            "on-secondary-container": "#d99dff",
+            "surface-variant": "#2e3545",
+            "on-tertiary-fixed-variant": "#930006",
+            "surface-container-highest": "#2e3545",
+            "on-primary-fixed-variant": "#90003d",
+            "error": "#ffb4ab",
+            "surface-tint": "#ffb1c0",
+            "on-surface": "#dce2f7",
+            "surface": "#0c1322",
+            "on-tertiary-container": "#5c0002",
+            "primary-fixed-dim": "#ffb1c0",
+            "secondary-fixed-dim": "#e3b5ff",
+            "surface-bright": "#323949",
+            "background": "#0c1322",
+            "on-background": "#dce2f7",
+            "surface-container-high": "#232a3a",
+            "tertiary": "#ffb4aa",
+            "inverse-on-surface": "#293040",
+            "on-primary-fixed": "#3f0017",
+            "on-error-container": "#ffdad6",
+            "secondary-container": "#6a1c9b",
+            "surface-dim": "#0c1322",
+            "outline": "#a9898e",
+            "primary-fixed": "#ffd9df",
+            "tertiary-fixed": "#ffdad5",
+            "surface-container-lowest": "#070e1d",
+            "on-primary-container": "#5a0023",
+            "on-error": "#690005",
+            "on-secondary": "#4e0079",
+            "inverse-primary": "#bb0452",
+            "on-primary": "#660029",
+            "outline-variant": "#5a4045",
+            "inverse-surface": "#dce2f7",
+            "primary": "#ffb1c0"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-compact": "0.5rem",
+            "margin": "1rem",
+            "gutter-grid": "0.125rem",
+            "space-lg": "1rem",
+            "space-sm": "0.5rem",
+            "gutter": "0.75rem",
+            "space-md": "0.75rem",
+            "space-xl": "1.5rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "body-md": ["Inter"],
+            "label-lg": ["Inter"],
+            "display-hero": ["Inter"],
+            "headline-md": ["Inter"],
+            "counter-number": ["Inter"],
+            "headline-sm": ["Inter"],
+            "body-lg": ["Inter"],
+            "headline-lg": ["Inter"],
+            "label-sm": ["Inter"],
+            "body-sm": ["Inter"],
+            "label-md": ["Inter"]
+          },
+          "fontSize": {
+            "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "display-hero": ["34px", { "lineHeight": "40px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "counter-number": ["13px", { "lineHeight": "16px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-sm": ["16px", { "lineHeight": "22px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-lg": ["15px", { "lineHeight": "22px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "headline-lg": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      line-height: 1;
+      display: inline-block;
+    }
+    .material-symbols-outlined.fill {
+      font-variation-settings: 'FILL' 1;
+    }
+    
+    /* 4-stop Sunset Gradient Accent */
+    .bg-sunset-gradient {
+      background: linear-gradient(135deg, #FF1E56 0%, #BA00E5 35%, #FF5546 70%, #FFA033 100%);
+    }
+    .text-sunset-gradient {
+      background: linear-gradient(135deg, #FF4C83 0%, #E3B5FF 40%, #FF8A65 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .story-ring-active {
+      background: linear-gradient(135deg, #FF1E56 0%, #BA00E5 35%, #FF5546 70%, #FFA033 100%);
+    }
+
+    /* Hide scrollbars for clean social UI */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    @keyframes spin-slow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .animate-spin-slow {
+      animation: spin-slow 8s linear infinite;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen font-body-md select-none antialiased flex justify-center">
+<!-- Mobile App Frame Container -->
+<div class="w-full max-w-md min-h-screen bg-surface flex flex-col relative overflow-hidden shadow-2xl">
+<!-- ========================================== -->
+<!-- VIEW 1: AUTHENTICATION FLOW (RO'YXATDAN O'TISH / KIRISH) -->
+<!-- ========================================== -->
+<section class="flex-1 flex flex-col justify-between p-6 z-40 bg-surface-container-lowest overflow-y-auto no-scrollbar" id="auth-view">
+<!-- Top Decorative Ambient Glow -->
+<div class="relative w-full pt-8 pb-4 flex flex-col items-center">
+<div class="w-24 h-24 rounded-full bg-sunset-gradient blur-2xl opacity-35 absolute -top-4"></div>
+<div class="w-16 h-16 rounded-2xl bg-sunset-gradient flex items-center justify-center shadow-lg shadow-primary-container/20 mb-3 relative z-10">
+<span class="material-symbols-outlined text-white text-3xl font-bold">bolt</span>
+</div>
+<!-- Brand Title (Strictly JSON Matching Identity) -->
+<h1 class="font-display-hero text-headline-lg font-extrabold tracking-tight text-sunset-gradient">Salo Social</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 text-center">Do'stlaringiz bilan lahzalarni ulashing va dunyoni kashf eting</p>
+</div>
+<!-- Auth Card / Form Elements -->
+<div class="w-full bg-surface-container/60 backdrop-blur-md border border-outline-variant/30 rounded-xl p-5 my-auto shadow-sm">
+<!-- Tab Selector: Ro'yxatdan o'tish vs Kirish -->
+<div class="flex items-center bg-surface-container-lowest p-1 rounded-lg mb-5 border border-outline-variant/20">
+<button class="flex-1 py-2 text-center rounded-md font-label-md text-label-md text-white bg-primary-container transition-all" id="btn-tab-signup" onclick="toggleAuthMode('signup')">
+            Ro'yxatdan o'tish
+          </button>
+<button class="flex-1 py-2 text-center rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" id="btn-tab-signin" onclick="toggleAuthMode('signin')">
+            Tizimga kirish
+          </button>
+</div>
+<!-- Dynamic Form Fields -->
+<form class="space-y-3.5" id="auth-form" onsubmit="handleAuthSubmit(event)">
+<!-- Full Name (Sign Up only) -->
+<div class="space-y-1" id="field-fullname">
+<label class="font-label-sm text-label-sm text-on-surface-variant">To'liq ism</label>
+<div class="flex items-center bg-surface-container-high rounded-lg px-3 py-2 border border-outline-variant/30 focus-within:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-outline text-lg mr-2">person</span>
+<input class="bg-transparent border-0 focus:ring-0 text-on-surface text-body-md font-body-md w-full p-0 placeholder:text-outline" id="input-fullname" placeholder="Ism Familiya" required="" type="text" value="Jasur Bekmirzayev"/>
+</div>
+</div>
+<!-- Username (Sign Up only) -->
+<div class="space-y-1" id="field-username">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Foydalanuvchi nomi</label>
+<div class="flex items-center bg-surface-container-high rounded-lg px-3 py-2 border border-outline-variant/30 focus-within:border-primary-container transition-colors">
+<span class="font-label-md text-label-md text-primary font-bold mr-1">@</span>
+<input class="bg-transparent border-0 focus:ring-0 text-on-surface text-body-md font-body-md w-full p-0 placeholder:text-outline" id="input-username" placeholder="username" required="" type="text" value="jasur_travel"/>
+</div>
+</div>
+<!-- Email or Phone -->
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Telefon yoki Email</label>
+<div class="flex items-center bg-surface-container-high rounded-lg px-3 py-2 border border-outline-variant/30 focus-within:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-outline text-lg mr-2">call</span>
+<input class="bg-transparent border-0 focus:ring-0 text-on-surface text-body-md font-body-md w-full p-0 placeholder:text-outline" id="input-contact" placeholder="+998 XX XXX XX XX" required="" type="text" value="+998 90 123 45 67"/>
+</div>
+</div>
+<!-- Password -->
+<div class="space-y-1">
+<div class="flex justify-between items-center">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Maxfiy parol</label>
+<button class="hidden font-label-sm text-label-sm text-primary hover:underline" id="btn-forgot-pass" type="button">Parolni unutdingizmi?</button>
+</div>
+<div class="flex items-center bg-surface-container-high rounded-lg px-3 py-2 border border-outline-variant/30 focus-within:border-primary-container transition-colors">
+<span class="material-symbols-outlined text-outline text-lg mr-2">lock</span>
+<input class="bg-transparent border-0 focus:ring-0 text-on-surface text-body-md font-body-md w-full p-0 placeholder:text-outline" id="input-password" placeholder="Kamida 8 belgi" required="" type="password" value="••••••••"/>
+<button class="text-outline hover:text-on-surface" onclick="togglePasswordVis()" type="button">
+<span class="material-symbols-outlined text-lg" id="eye-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full mt-2 py-3 rounded-xl bg-sunset-gradient text-white font-label-lg text-label-lg font-bold shadow-lg shadow-primary-container/25 active:scale-[0.98] transition-transform flex items-center justify-center gap-2" id="btn-auth-action" type="submit">
+<span>Ro'yxatdan o'tish</span>
+<span class="material-symbols-outlined text-sm font-bold">arrow_forward</span>
+</button>
+</form>
+<!-- Divider -->
+<div class="relative flex py-4 items-center">
+<div class="flex-grow border-t border-outline-variant/30"></div>
+<span class="flex-shrink mx-3 text-outline text-label-sm font-label-sm">YOKI</span>
+<div class="flex-grow border-t border-outline-variant/30"></div>
+</div>
+<!-- Social Quick Logins -->
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg bg-surface-container-high hover:bg-surface-variant border border-outline-variant/20 active:scale-95 transition-transform text-on-surface text-body-sm font-body-sm font-semibold" onclick="handleQuickLogin('Google')">
+<span class="w-4 h-4 rounded-full bg-white flex items-center justify-center text-surface-container-lowest font-black text-[10px]">G</span>
+<span>Google</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg bg-surface-container-high hover:bg-surface-variant border border-outline-variant/20 active:scale-95 transition-transform text-on-surface text-body-sm font-body-sm font-semibold" onclick="handleQuickLogin('Apple')">
+<span class="material-symbols-outlined text-base">phone_iphone</span>
+<span>Apple</span>
+</button>
+</div>
+</div>
+<!-- Footer Disclaimer -->
+<p class="font-body-sm text-body-sm text-outline text-center mt-4">
+        Davom etish orqali Salo Social <a class="text-primary hover:underline" href="#">Foydalanish shartlari</a> va <a class="text-primary hover:underline" href="#">Maxfiylik siyosatiga</a> rozilik bildirasiz.
+      </p>
+</section>
+<!-- ========================================== -->
+<!-- MAIN INTERACTIVE APP CONTAINER (SECTIONS) -->
+<!-- ========================================== -->
+<div class="hidden flex-1 flex flex-col h-screen overflow-hidden relative" id="main-app">
+<!-- ========================================== -->
+<!-- TOP APP BAR (Per Shared Component Specification) -->
+<!-- ========================================== -->
+<header class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-margin h-14 bg-surface-container-lowest/80 backdrop-blur-md border-b border-outline-variant/30 max-w-md mx-auto">
+<!-- Brand / Headline -->
+<div class="flex items-center gap-2">
+<span class="font-display-hero text-headline-lg font-extrabold tracking-tight text-on-surface cursor-pointer" onclick="switchTab('home')">Salo Social</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<!-- Trailing Icons / Chat and Activity -->
+<div class="flex items-center gap-3">
+<!-- Like Notification Heart -->
+<button class="relative p-1.5 text-on-surface hover:text-primary transition-colors active:scale-95" onclick="showToast('Sizda 4 ta yangi bildirishnoma bor')">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+<span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary-container"></span>
+</button>
+<!-- Direct Chat Bubble (Required Shared Prop trailing_icon) -->
+<button class="relative p-1.5 text-primary hover:text-primary transition-colors active:scale-95" onclick="showToast('Xabarlar ochilmoqda...')">
+<span class="material-symbols-outlined text-2xl">chat_bubble</span>
+<span class="absolute -top-0.5 -right-0.5 px-1.5 py-0.2 bg-sunset-gradient text-white rounded-full font-label-sm text-[10px] font-bold">3</span>
+</button>
+</div>
+</header>
+<!-- ========================================== -->
+<!-- SCROLLABLE APP BODY -->
+<!-- ========================================== -->
+<main class="flex-1 overflow-y-auto no-scrollbar pt-14 pb-20 bg-surface">
+<!-- ---------------------------------------- -->
+<!-- TAB 1: ASOSIY LENTA (FEED) -->
+<!-- ---------------------------------------- -->
+<section class="tab-content flex flex-col" id="tab-feed">
+<!-- Stories Carousel Tray -->
+<div class="py-3 px-margin overflow-x-auto no-scrollbar flex items-center gap-3 border-b border-outline-variant/20 bg-surface-container-lowest/40">
+<!-- User's Own Story (+ badge) -->
+<div class="flex flex-col items-center shrink-0 cursor-pointer" onclick="openStoryModal('Jasur (Siz)')">
+<div class="relative p-0.5">
+<div class="w-16 h-16 rounded-full p-[2px] bg-outline-variant/40">
+<img class="w-full h-full rounded-full object-cover" data-alt="A close up charismatic studio portrait of a young Uzbek creative professional with subtle cinematic warm lighting, modern dark background, sharp focused eyes and stylish haircut, matching modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb02S2ielE6sLzJaLLppwJKzdt2vtGeUFXk6DIkbaudh1h-JpVKVSkiTjPwjG2aP738MfoOIHgal5l8SQdJOHA03Tk0PK_ttIPySiTmfQKk5RWXeUBWst0DX_2FvLG658b_x7yQEnkeI28v1fNZPOSutGL3PDYdwamMYppDFLqv5DVHjk99gWeHX7Ij7MkzLQFfbdhQCFzmFpLrR1fJIkWLRyDX9Qb-J8aqU3E4Zg"/>
+</div>
+<div class="absolute bottom-0 right-0 w-5 h-5 rounded-full bg-primary-container border-2 border-surface flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-sm font-bold">add</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface mt-1.5 truncate max-w-[70px]">Sizniki</span>
+</div>
+<!-- Story 1: @malika_art -->
+<div class="flex flex-col items-center shrink-0 cursor-pointer" onclick="openStoryModal('Malika Art')">
+<div class="story-ring-active p-[2.5px] rounded-full">
+<div class="w-16 h-16 rounded-full p-[2px] bg-surface">
+<img class="w-full h-full rounded-full object-cover" data-alt="A portrait of a contemporary female graphic designer in Tashkent with creative warm sunset ambient light, soft bokeh, expressive look, wearing stylish minimalist clothes in dark moody photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiNtO6Nm2UWN9T9GD0ed6x5hPQEmZLjQjz_3i2SaJDS84CQp-m8FJp51mvwWR6yZdEmsoukoJDKdyoyUW8kf8LdDpVWWfE4768f7m5eSAUcEYiU5WBJmP9J3l-lgN9GFxJejb0sw5gmdZasPqF9D_vsxCoTXV_aWuEQNp_rcwAB5NHCDjhvSbufOnNMir03Ss4kVEqFtPym78dasmjYN1yelmcZ5U-XpBh0wgUOVw"/>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface mt-1.5 truncate max-w-[70px]">malika_art</span>
+</div>
+<!-- Story 2: @samarkand_vibe -->
+<div class="flex flex-col items-center shrink-0 cursor-pointer" onclick="openStoryModal('Samarqand Vibe')">
+<div class="story-ring-active p-[2.5px] rounded-full">
+<div class="w-16 h-16 rounded-full p-[2px] bg-surface">
+<img class="w-full h-full rounded-full object-cover" data-alt="A colorful scenic cultural travel glimpse of ancient Registan tiles under twilight glow, high aesthetic modern architectural photography with deep violet and gold illumination." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2Cv3kYLORlWO0DHHpnFZ7nmROoBIxptriPyXXJJEOwguaeiA-eD5EFg86o1LNL8dUZ_C4r3uHSnBlNJMAdfTt8Q6z81iaLxYCXrjtbPtC6TwWfM3g-h8fmySnmpORDn3S-58IKU3HJX0JPr_QbqKJYAweY1xihBA1_h6nCcCveC-LWp1o1WISTSfugvMKgQOvR1PIKIZZMBRZ12ufTazjFaIs2qZcY3hF_e0PD0U"/>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface mt-1.5 truncate max-w-[70px]">samarkand_v</span>
+</div>
+<!-- Story 3: @aziz_tech -->
+<div class="flex flex-col items-center shrink-0 cursor-pointer" onclick="openStoryModal('Aziz Tech')">
+<div class="story-ring-active p-[2.5px] rounded-full">
+<div class="w-16 h-16 rounded-full p-[2px] bg-surface">
+<img class="w-full h-full rounded-full object-cover" data-alt="A modern tech workspace portrait of a software engineer smiling in front of multiple curved neon monitors, violet and orange LED backlights, cinematic cyber aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX6l6QCezp73-Mul3og1-v5nS5WjmEbF0iaerUTm4r_oEsVk47irABAJazw9BbjuihxYOb1fKW0bfrwW2oRWzn-kS-w9GLBMB-wnEJ38vbHpIaiOZLtYRb5zTHzzkIHyo6sf4CAbQ8FjuDMgMPCFtkdSKdfKkAvyCIBEc9M_xG-In8f_U2X47rW_L0SZYREIOUl6g_it7GksrL7kcMUjzM18pLmwLiuU42fdWw9eo"/>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface mt-1.5 truncate max-w-[70px]">aziz_tech</span>
+</div>
+<!-- Story 4: @dilnoza_life -->
+<div class="flex flex-col items-center shrink-0 cursor-pointer" onclick="openStoryModal('Dilnoza')">
+<div class="p-[2.5px] rounded-full bg-outline-variant/30">
+<div class="w-16 h-16 rounded-full p-[2px] bg-surface">
+<img class="w-full h-full rounded-full object-cover" data-alt="Lifestyle travel photography of a stylish woman sipping coffee at a terrace cafe overlooking city skyline, warm natural golden hour light, filmic grain aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpQuiQu5ydoU4WNEDp9XoaaQMFxkDoKczzyRoNJ_v0l-kmphQVWzho4ObBHT0n0amXWcvBVpTLC14PsxgXuXpIhgCRZk2jQ3E4W6-uqFeT4FQKeDYZUpWvStWDrMMesX_V3splfdfaJHHpy_Cgipam9fFdcH-gJQGYC9dBtveI2vCLLKGtnAs1Kupq2cEEk34cLOQAcyF2vIubtHN03KyRaQz3n9A5YPCaRJdTGHI"/>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1.5 truncate max-w-[70px]">dilnoza_m</span>
+</div>
+</div>
+<!-- ================= POST 1 ================= -->
+<article class="border-b border-outline-variant/30 pb-4">
+<!-- Post Header -->
+<div class="flex items-center justify-between px-margin py-3">
+<div class="flex items-center gap-2.5">
+<div class="story-ring-active p-[2px] rounded-full cursor-pointer">
+<div class="w-9 h-9 rounded-full bg-surface p-[1px]">
+<img class="w-full h-full rounded-full object-cover" data-alt="Profile avatar portrait of an adventurer with sunglasses standing against mountain peaks in Uzbekistan, golden hour ambient light, editorial outdoor portrait." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3pl1s5nfK2lpRlgz1MlF6o5pjs0_2mKoInjNNxv_1panTEilvMnjj0PgHDvTBkQ6K0og1PFE8D6dqFlAzFT8u3LbAB8t1qo5QhKX6PBpKY6W-l93XRVN9KFHx7I5OxKpgD2UTFnoLqpcPAnr0zTVYZ8NFMX293nUISjqHNnEv5CKAHYlVY4JCJJ-CMkaBzy8CEsp3zOH01H3uEB80yagmUFsV7nfBU5GjqoM4ntg"/>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-1">
+<span class="font-label-lg text-label-lg text-on-surface">jasur_travel</span>
+<span class="material-symbols-outlined text-primary text-sm fill">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Chorvoq tog'lari, Toshkent viloyati</span>
+</div>
+</div>
+<button class="text-outline hover:text-on-surface p-1">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<!-- Post Media (Full-Bleed 100vw) -->
+<div class="relative w-full aspect-square bg-surface-container-high overflow-hidden cursor-pointer" ondblclick="toggleLikePost(1)">
+<img class="w-full h-full object-cover" data-alt="Breathtaking panoramic view of turquoise mountain lake surrounded by dramatic jagged snow-dusted alpine ridge under a deep sunset gradient sky of magenta, amber and purple with soft reflections on calm crystal water." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJQUhOmvxW5kX4WIJcuqJQQYkkR36Wqdt3ebRiHjA-XrBLQmPjOxTV7G3gjtwPrB5QJG6xheS47_mIR09h16rFmJeskzm7So6GGFgXECLQkvZDUgzx8nQZoEZLWjm4lETYW0ny4K7j4T7UGUOkaBXwsYOim3eiZ2jE0eoJlSj3mIViTPS8ZjZeyVthJFPxfRPCReHpPRAlgoSF8nppkvHkpNLUyBALqXhbqkreKPA"/>
+<!-- Double Tap Heart Animation Overlay -->
+<div class="absolute inset-0 flex items-center justify-center opacity-0 scale-50 pointer-events-none transition-all duration-300" id="heart-anim-1">
+<span class="material-symbols-outlined text-primary-container text-8xl drop-shadow-xl fill">favorite</span>
+</div>
+<!-- Slide Tag Indicator -->
+<div class="absolute top-3 right-3 bg-surface-container-lowest/70 backdrop-blur-md px-2.5 py-1 rounded-full text-label-sm font-label-sm text-white">
+                1/3
+              </div>
+</div>
+<!-- Engagement Action Bar -->
+<div class="px-margin pt-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<!-- Like Button -->
+<button class="flex items-center gap-1 text-on-surface hover:text-primary active:scale-125 transition-transform duration-150" id="like-btn-1" onclick="toggleLikePost(1)">
+<span class="material-symbols-outlined text-2xl" id="like-icon-1">favorite</span>
+</button>
+<!-- Comment -->
+<button class="flex items-center gap-1 text-on-surface hover:text-primary active:scale-95 transition-transform" onclick="openCommentDrawer('jasur_travel')">
+<span class="material-symbols-outlined text-2xl">mode_comment</span>
+</button>
+<!-- Share -->
+<button class="flex items-center gap-1 text-on-surface hover:text-primary active:scale-95 transition-transform" onclick="sharePost('jasur_travel')">
+<span class="material-symbols-outlined text-2xl">send</span>
+</button>
+</div>
+<!-- Bookmark Button -->
+<button class="text-on-surface hover:text-white active:scale-95 transition-transform" id="bookmark-btn-1" onclick="toggleBookmark(1)">
+<span class="material-symbols-outlined text-2xl" id="bookmark-icon-1">bookmark_border</span>
+</button>
+</div>
+<!-- Likes Counter -->
+<div class="mt-2 font-counter-number text-counter-number text-on-surface">
+<span id="like-count-1">1,842</span> ta yoqtirish
+              </div>
+<!-- Caption -->
+<div class="mt-1 font-body-md text-body-md text-on-surface">
+<span class="font-label-lg text-label-lg font-bold mr-1">jasur_travel</span>
+                Tog'larning sokinligini his etish boshqacha zavq. Qor bilan qoplangan cho'qqilar va quyosh botishining betakror manzarasi! 🏔️✨ Siz eng so'nggi bor qayerga sayohat qildingiz?
+              </div>
+<!-- Hashtags -->
+<div class="mt-1 font-body-sm text-body-sm text-secondary">
+                #Chorvoq #Uzbekistan #Sayohat #SaloSocial #NatureVibes
+              </div>
+<!-- Comments Count & Link -->
+<button class="mt-1.5 font-body-sm text-body-sm text-outline block hover:text-on-surface" onclick="openCommentDrawer('jasur_travel')">
+                Barcha 128 ta izohni ko'rish...
+              </button>
+<span class="font-label-sm text-label-sm text-outline/60 mt-1 block">2 SOAT OLDIN</span>
+</div>
+</article>
+<!-- ================= POST 2 ================= -->
+<article class="border-b border-outline-variant/30 pb-4">
+<!-- Post Header -->
+<div class="flex items-center justify-between px-margin py-3">
+<div class="flex items-center gap-2.5">
+<div class="story-ring-active p-[2px] rounded-full cursor-pointer">
+<div class="w-9 h-9 rounded-full bg-surface p-[1px]">
+<img class="w-full h-full rounded-full object-cover" data-alt="Artistic profile photo of a modern female illustrator with stylish round glasses in warm colored neon ambient illumination." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3oTC7vWl7OVbR9kB8TwAHgGhf1A4JVI1gn6LmMFPBT6o6wT1aQyzKS7ZIMY-c2PkyY7yivhC3iBA4rtUOsiXeLBN0o6_Px9z7f56uxhnU8qXyX0IAQrpujMhril3CnaUcWBFt2JXm4PmGc9nEbUHtSDFmj3OhviYBmsc4ruIk90m24-Xla-7VIF1poWfREVMLXxut7t2vbtlVowyDCf-WOUhCj7jJWXaf9XxVDpc"/>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-1">
+<span class="font-label-lg text-label-lg text-on-surface">malika_art</span>
+<span class="material-symbols-outlined text-primary text-sm fill">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">Toshkent, O'zbekiston</span>
+</div>
+</div>
+<button class="text-outline hover:text-on-surface p-1">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<!-- Post Media (Full-Bleed) -->
+<div class="relative w-full aspect-square bg-surface-container-high overflow-hidden cursor-pointer" ondblclick="toggleLikePost(2)">
+<img class="w-full h-full object-cover" data-alt="A modern digital artwork exhibition in Tashkent with vibrant neon violet, magenta and cyan projections reflecting on sleek polished gallery floors, futuristic visual art installation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDldiL--kCJfcq7i1rXRnbkDx88gy-3XxpwSQ64mJiiFAVjR-C_ocpUMxPlLAZGajxqDtGeV5CwRt7wWwr7l95q7uTAyFIp2fN_m1q2rFwvNI7AA4mumQPI_SeLy3PN_7OqnRE0XSML5BSKMpNtIflKvtvjCh6RvKRlWG2j3RFEucZriXk-Mnc-52wM2coAPEhqzM_6pauQ3Bs_sMfOU0wQWKRGqs7f-wFtZGUGHDI"/>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 scale-50 pointer-events-none transition-all duration-300" id="heart-anim-2">
+<span class="material-symbols-outlined text-primary-container text-8xl drop-shadow-xl fill">favorite</span>
+</div>
+</div>
+<!-- Engagement Action Bar -->
+<div class="px-margin pt-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-1 text-on-surface hover:text-primary active:scale-125 transition-transform duration-150" id="like-btn-2" onclick="toggleLikePost(2)">
+<span class="material-symbols-outlined text-2xl" id="like-icon-2">favorite</span>
+</button>
+<button class="flex items-center gap-1 text-on-surface hover:text-primary active:scale-95 transition-transform" onclick="openCommentDrawer('malika_art')">
+<span class="material-symbols-outlined text-2xl">mode_comment</span>
+</button>
+<button class="flex items-center gap-1 text-on-surface hover:text-primary active:scale-95 transition-transform" onclick="sharePost('malika_art')">
+<span class="material-symbols-outlined text-2xl">send</span>
+</button>
+</div>
+<button class="text-on-surface hover:text-white active:scale-95 transition-transform" id="bookmark-btn-2" onclick="toggleBookmark(2)">
+<span class="material-symbols-outlined text-2xl" id="bookmark-icon-2">bookmark_border</span>
+</button>
+</div>
+<div class="mt-2 font-counter-number text-counter-number text-on-surface">
+<span id="like-count-2">3,410</span> ta yoqtirish
+              </div>
+<div class="mt-1 font-body-md text-body-md text-on-surface">
+<span class="font-label-lg text-label-lg font-bold mr-1">malika_art</span>
+                Yangi raqamli ko'rgazmamiz nihoyat ochildi! San'at va texnologiya uyg'unligi har bir mehmonni hayratga soladi deb umid qilaman. Kelib ko'ring! 🎨💜
+              </div>
+<div class="mt-1 font-body-sm text-body-sm text-secondary">
+                #DigitalArt #TashkentArt #VisualDesign #SaloCommunity
+              </div>
+<button class="mt-1.5 font-body-sm text-body-sm text-outline block hover:text-on-surface" onclick="openCommentDrawer('malika_art')">
+                Barcha 64 ta izohni ko'rish...
+              </button>
+<span class="font-label-sm text-label-sm text-outline/60 mt-1 block">5 SOAT OLDIN</span>
+</div>
+</article>
+</section>
+<!-- ---------------------------------------- -->
+<!-- TAB 2: QIDIRUV & EXPLORE -->
+<!-- ---------------------------------------- -->
+<section class="tab-content hidden flex-col" id="tab-search">
+<!-- Sticky Search Header -->
+<div class="p-margin bg-surface/90 backdrop-blur-md sticky top-0 z-20 space-y-3">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-xl">search</span>
+<input class="w-full bg-surface-container-high rounded-full pl-10 pr-4 py-2 text-body-md font-body-md text-on-surface placeholder:text-outline border-none focus:ring-1 focus:ring-primary-container" placeholder="Foydalanuvchilar, teglarni qidirish..." type="text"/>
+</div>
+<!-- Explore Filter Chips -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar">
+<button class="px-3.5 py-1 rounded-full bg-sunset-gradient text-white text-label-md font-label-md shrink-0" onclick="filterExplore(this)">Hammasi</button>
+<button class="px-3.5 py-1 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface-variant text-label-md font-label-md shrink-0" onclick="filterExplore(this)">Sayohat</button>
+<button class="px-3.5 py-1 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface-variant text-label-md font-label-md shrink-0" onclick="filterExplore(this)">Texnologiya</button>
+<button class="px-3.5 py-1 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface-variant text-label-md font-label-md shrink-0" onclick="filterExplore(this)">San'at</button>
+<button class="px-3.5 py-1 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface-variant text-label-md font-label-md shrink-0" onclick="filterExplore(this)">Taomlar</button>
+<button class="px-3.5 py-1 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface-variant text-label-md font-label-md shrink-0" onclick="filterExplore(this)">Sport</button>
+</div>
+</div>
+<!-- Masonry / Bento Inspired 3-column Mosaic Grid -->
+<div class="grid grid-cols-3 gap-[2px] p-[2px]">
+<!-- Item 1 (Square) -->
+<div class="relative aspect-square bg-surface-container cursor-pointer group" onclick="showToast('Rasm ochilmoqda...')">
+<img class="w-full h-full object-cover" data-alt="A modern stylish flat-lay of tech gadgets including headphones, mechanical keyboard with neon accents on sleek dark desk, cinematic lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJTPAmmRyNR-wb1oSQLt_25ANrfVOoLTevQzmsZrtobPulVc511idJ5WvO3lyN7KbwPOEuVZkTEgKJViarlqMHyOx1n9A9VC_fK4RqEdJjd2UJyv0-cfcv15yUKyG4j3kSlmscMIaLYQXEY36a88skvgI1MSXtw1qeHZiXLlUKAibsn1Xdl8fhxZgWagdFSPoEcUV4UsRcsb-IQtwdM5N7iKcLPPwjB9jpXLN6qic"/>
+<div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-1 text-white font-label-md text-xs transition-opacity">
+<span class="material-symbols-outlined text-sm fill">favorite</span> 4.1k
+              </div>
+</div>
+<!-- Item 2 (Square) -->
+<div class="relative aspect-square bg-surface-container cursor-pointer group" onclick="showToast('Rasm ochilmoqda...')">
+<img class="w-full h-full object-cover" data-alt="Atmospheric night photograph of Samarkand ancient illuminated minarets under stars, long exposure, warm golden lighting contrasting deep navy blue sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCvFzcfdvnzFq3vPfPBzC945X4DU5xVHhMvPndgTc966st-mCyYy7D--FFm0Rvm3AToRsDzj2fgMJFsTvNh6Wl3uyCy7mwkAtkqxes27caDR7R9EIsWIcrzUyUEFpE0XmAzVowum_QOchbqSAM5OO7S7bTLAyOYTG_54K3ShPvin_rfPFmjclqzgVDg-hOyOC97BKsH7ybib_8LdiNi3wWYPUA-Lxl6RRKiDMD3zo"/>
+<span class="absolute top-1.5 right-1.5 material-symbols-outlined text-white text-base drop-shadow">photo_library</span>
+</div>
+<!-- Item 3 (Large 2-row Video / Reel feature) -->
+<div class="relative row-span-2 col-span-1 bg-surface-container cursor-pointer group" onclick="switchTab('reels')">
+<img class="w-full h-full object-cover" data-alt="Vertical portrait shot of modern dance performer in high fashion neon street apparel posing under rain-slicked city lights with vivid magenta glow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpRtkKpZRD6FZ7sXokEXDYM0sNDnIS0Sz7vtkuyX9hZz9cSbgix14uOM_p_jtniFlBlR0GxOiq5KfvlbqtjqvhnoanlnPCs4OqcivF6qSIFdQe0KOhTvRE-qPmleL-gO7a_5ItXAe7-wjLTdrS0C3QPqDletqzDgQU0Vc9eWjGNjtYGS7j63-nwKUR8tCJzkfWRiCnyE-yrM48_pkDeyt6dE67Bm-ir3CsTar7Iyc"/>
+<span class="absolute top-2 right-2 material-symbols-outlined text-white text-lg fill drop-shadow">movie</span>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 text-white text-label-sm font-label-sm drop-shadow">
+<span class="material-symbols-outlined text-sm">play_arrow</span> 85.4K
+              </div>
+</div>
+<!-- Item 4 -->
+<div class="relative aspect-square bg-surface-container cursor-pointer group" onclick="showToast('Rasm ochilmoqda...')">
+<img class="w-full h-full object-cover" data-alt="Delicious gourmet Uzbek plov presented with pomegranate seeds and tender meat on handcrafted ceramic dish with warm candlelight ambiance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX82ZRJAfFUKKi65MotxzxNMnXFdKZ3hkyCTroIUGhFCGgbRtp8wp0HLG68OiYCPXGNYcz3t3HW23zrusX0wQ4sTCvEGOCM4dW0RAmJ8NjwUX4DJg9vjV6r5ACpkjTKK7yDy9b3hbAmG4aP5oeEvZDiW_Ub73Ouc6kFZVuWRVP5VuS40a83hEAlt0h7B093GiIU_DGjNJ2Ml4o0FTpgu0CTsPCJ7tUTTtlU8Nv7TI"/>
+</div>
+<!-- Item 5 -->
+<div class="relative aspect-square bg-surface-container cursor-pointer group" onclick="showToast('Rasm ochilmoqda...')">
+<img class="w-full h-full object-cover" data-alt="Modern architecture of Tashkent International Business City skyscrapers with glass facades reflecting pink sunset rays." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjIgvA4RMrv7RPX4cvk4CcrUd-ZTXhm6uhRpvgrr-FaQTXwMHScvPGtrO0_LeBmzQ70Khmj2bwM1TwmVxmh--oUEKeHtQNo_7H8sF4WPf1OgeyeEZSXJgkb0rqdVp0mRs8pj56fWp2kQocXb8LEdEsxq5VWOweROUI4bgJAD8uKbd0OG9qf-XysWn-nAOO7B8zSSzHMlWw6UuHHVyZOlSU8uJLqxAhCsm7_60zzDE"/>
+</div>
+<!-- Item 6 (Wide feature or regular) -->
+<div class="relative aspect-square bg-surface-container cursor-pointer group" onclick="showToast('Rasm ochilmoqda...')">
+<img class="w-full h-full object-cover" data-alt="Abstract colorful neon waves fluid 3D digital wallpaper with orange, berry pink, and purple gradient flowing curves." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxxZV_DLTnprMl2o3Ijp4BMKFqRO8dxxQNybbcPHa-RlG7V-AoUdkHtMqpJdJcvOt-gmShiUiYTLw_U1ZexpDrTyQKng83VumjXro_RGoQVwBC_-Qz9pw7EmV8mV7xfQ0P1Usc9AIU_lnleYoDjffYCPIrHLU9yIl9twkTmFBcuI6QFpQJkgql8YndMexpW-CQmX4OgS-IoleQouwiq5M5XfSLYkAgTiSL9NptKx4"/>
+</div>
+<!-- Item 7 -->
+<div class="relative aspect-square bg-surface-container cursor-pointer group" onclick="showToast('Rasm ochilmoqda...')">
+<img class="w-full h-full object-cover" data-alt="Close up photography of barista pouring creative latte art tulip into dark ceramic cup in aesthetic cozy coffee shop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvLBMT_xYGTzYIRZz2nS5eOqhzCXqQL852q0Z3LtDlmxv4EoSbSvwZjtGKW0R-bUCgwKA8chCYlYytfRiC0aSwuXtZoiNRjM86bxTNfLY0T19zJ1xk6atEtH3HMLwzIjMtO5ENZpJD8ZVzfyGtHB2BwqT8E6sFxvZmO3dhe5XPtxFsB-A_qhh1Npml-M5g3jfROM6bgaCa4miBDnHpMowyTgFjWFnTiTJ7Tj_Yp5U"/>
+</div>
+<!-- Item 8 -->
+<div class="relative aspect-square bg-surface-container cursor-pointer group" onclick="showToast('Rasm ochilmoqda...')">
+<img class="w-full h-full object-cover" data-alt="Vintage retro sports car parked beside mountain highway during purple twilight with glowing red taillights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRG2I3RWT7fz-cZNsA-m9ZsX68APklAUDwe-lr_soCvnnYQCSXLIJk0aax7hcC2xVMCQP6qYo6CcDP29bW1vK54RNjYt-5GBWQtO1ddhglq-A-1c-1wGuf4Q7YnelAVqloENMlY35ImYVsAy3P-ePzi4QW0MLbnP8E3bTGs3Eqf9Rd45EcRVVGovPpR5__NGOoASVPezjFak2zBpHGPc6mFAm0zxq4oo1gFuY8aAk"/>
+<span class="absolute top-1.5 right-1.5 material-symbols-outlined text-white text-base drop-shadow">photo_library</span>
+</div>
+<!-- Item 9 -->
+<div class="relative aspect-square bg-surface-container cursor-pointer group" onclick="showToast('Rasm ochilmoqda...')">
+<img class="w-full h-full object-cover" data-alt="Portrait of an energetic electronic music DJ performing at outdoor summer festival with vibrant stage lasers in Tashkent." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvWlfcbOIEoRmgQqAlrf371Ce8ihTEwkl989Pdj3Sz94j4x7kqhR89LO46t1_X-UQVLbR0JBmrmsuXWtR50WhclIM991jgaqytnWkzJhyDcfho51v8oJzkxyUMoPJFACTGQkIcXSosfCODP_SP4PbaCF06aIlo_LiFXQpncvAu9ndN69lBXMeQhZQw-rP857FiKNePpiH9C01ZFTWyckNcSajU_38hu6FimeXjyWM"/>
+</div>
+<!-- Item 10 -->
+<div class="relative aspect-square bg-surface-container cursor-pointer group" onclick="showToast('Rasm ochilmoqda...')">
+<img class="w-full h-full object-cover" data-alt="Serene desert dunes in Bukhara with golden sand ripples under a warm gradient setting sun." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfUC61LHwNeH-vxdvQ7joK0467TbHiAdOLO1Pw5e4DepFMiUldNiGJa6UJgw3iwsmvq_AuBxGqWhOQMIzIvTpYL0lnlhVgSrHhtzaFIlKvYTzcsCuWpTUb2ytvY96bbjxC61SjRqHxfvdv2l7rXDjZeTubqRc3vQQsKRivoZyGgOBphZnAy_ExutsVYE5sF6fuKJgzHHuOYplVb4a0aIcg3FKqkxwJgz2IR_aBJPU"/>
+</div>
+<!-- Item 11 -->
+<div class="relative aspect-square bg-surface-container cursor-pointer group" onclick="showToast('Rasm ochilmoqda...')">
+<img class="w-full h-full object-cover" data-alt="Contemporary interior living room design with warm wood paneling, velvet dark sofa and warm mood lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5LmMUHTpLhNW2OJcKBWPiqfa-jgx5zXeqS6XW2ZT9LT5qMxtw0Sz6CilXlTdvL4tiCkB_av9M8PzrM9ETGBApAsc4rtBwA-A6sQgLk_tyQrLHo_3znr0wwAId2mlXf9WVDfV_kodBFSAV_4fjlwFWB5S9rOzunu6H2N-UVa_b0wpdWG9cSaijL95v2fEwKXnCltXD34Mw4qjMaEE4rFVM-d1NizRmllBXionH118"/>
+</div>
+</div>
+</section>
+<!-- ---------------------------------------- -->
+<!-- TAB 3: REELS (QISQA VIDEOLAR) -->
+<!-- ---------------------------------------- -->
+<section class="tab-content hidden" id="tab-reels" style="height:calc(100dvh - 112px);">
+  <div id="ss-reels-list" style="height:100%;overflow-y:auto;background:#000;scroll-snap-type:y mandatory;"></div>
+</section>
+<!-- ---------------------------------------- -->
+<!-- TAB 4: FOYDALANUVCHI PROFILI (PROFILE) -->
+<!-- ---------------------------------------- -->
+<section class="tab-content hidden flex-col" id="tab-profile">
+<!-- Profile Header Information -->
+<div class="p-margin space-y-4">
+<!-- Row: Avatar & Metrics -->
+<div class="flex items-center justify-between">
+<!-- Profile Avatar with Sunset Ring -->
+<div class="relative story-ring-active p-[2.5px] rounded-full">
+<div class="w-20 h-20 rounded-full bg-surface p-[2px]">
+<img class="w-full h-full rounded-full object-cover" data-alt="A close up charismatic studio portrait of a young Uzbek creative professional with subtle cinematic warm lighting, modern dark background, sharp focused eyes and stylish haircut, matching modern aesthetic." id="profile-avatar-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqAAtuZw-JvWGrnTRAzKzQ04YWuVWDjZiAkAl1Bp69l36mH8jCklFFd6WSb2ax-bj0IKpd3cVbvfg0ZOafdStWss-TUgpxmKcyH0JMLsIQBz-486cT0nc4Adcexdcl6DjLNfALlCqGbvyt6b1DxAmH-ysWRi06uM6LnG4Qx6FH4NWYpkXz1f9rucGaNgzaCJ8MVZTgPFMLPe_ABGcRWbm7wAmjQNNgtyROMt3cAUo"/>
+</div>
+<div class="absolute bottom-0 right-0 w-6 h-6 rounded-full bg-primary-container border-2 border-surface flex items-center justify-center text-white cursor-pointer" onclick="showToast('Rasm yangilash')">
+<span class="material-symbols-outlined text-xs font-bold">add_a_photo</span>
+</div>
+</div>
+<!-- Stats Columns -->
+<div class="flex items-center gap-5 text-center flex-1 justify-around pl-4">
+<div class="cursor-pointer">
+<div class="font-counter-number text-headline-sm font-bold text-on-surface">54</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Postlar</div>
+</div>
+<div class="cursor-pointer">
+<div class="font-counter-number text-headline-sm font-bold text-on-surface">14.2K</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Kuzatuvchi</div>
+</div>
+<div class="cursor-pointer">
+<div class="font-counter-number text-headline-sm font-bold text-on-surface">389</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Kuzatmoqda</div>
+</div>
+</div>
+</div>
+<!-- Profile Name & Bio Details -->
+<div>
+<div class="flex items-center gap-1.5">
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface" id="profile-display-name">Jasur Bekmirzayev</h2>
+<span class="material-symbols-outlined text-primary text-base fill">verified</span>
+</div>
+<div class="font-label-md text-label-md text-primary font-medium" id="profile-display-handle">@jasur_travel</div>
+<p class="font-body-md text-body-md text-on-surface mt-1.5">
+                Fotograf &amp; Sayohat ixlosmandi 🏔️📸<br/>
+                Markaziy Osiyoning yashirin go'zalliklarini kashf etamiz.<br/>
+                📍 Toshkent, O'zbekiston
+              </p>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary mt-1 hover:underline" href="#">
+<span class="material-symbols-outlined text-sm">link</span>
+                t.me/jasur_bekmirzayev
+              </a>
+</div>
+<!-- Profile CTA Action Buttons -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 py-2 px-3 rounded-lg bg-surface-container-high hover:bg-surface-variant border border-outline-variant/30 text-on-surface font-label-md text-label-md font-semibold text-center transition-colors" onclick="showToast('Profilni tahrirlash oynasi ochilmoqda')">
+                Profilni tahrirlash
+              </button>
+<button class="flex-1 py-2 px-3 rounded-lg bg-surface-container-high hover:bg-surface-variant border border-outline-variant/30 text-on-surface font-label-md text-label-md font-semibold text-center transition-colors" onclick="sharePost('Jasur Profil')">
+                Profilni ulashish
+              </button>
+<!-- Settings/Logout Button -->
+<button class="p-2 rounded-lg bg-surface-container-high hover:bg-error-container text-outline hover:text-error border border-outline-variant/30 transition-colors" onclick="handleLogout()" title="Chiqish">
+<span class="material-symbols-outlined text-xl">logout</span>
+</button>
+</div>
+<!-- Story Highlights -->
+<div class="pt-2 flex items-center gap-4 overflow-x-auto no-scrollbar">
+<div class="flex flex-col items-center gap-1 shrink-0 cursor-pointer" onclick="showToast('Tog\'lar hikoyalari')">
+<div class="w-14 h-14 rounded-full p-[2px] border border-outline-variant/50 bg-surface-container">
+<img class="w-full h-full rounded-full object-cover" data-alt="Circular photo thumbnail of high snow peaks in Chimgan mountains under clear sunny sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNoIF1nGQrVhD6ZDo6p89CsZMRDv68lqHkpiVHco_rWXNuG9wuliX0xTiozUUexToqJnGaBeGif8rjBTMMnJaKazx_Tx-j1PKZDCEWjPLNrffFa_Cr62J7Kz5l08Xb7UQllfc6pV1CSvualhBp2AanL2f4NYKjzn3L0TggY28Evz7cWkSxr7HJPuY1CZ5HR1_4MtrSUFfZZKa25qg4uNKQnBORgpal5_cWRnEccOM"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface">Tog'lar</span>
+</div>
+<div class="flex flex-col items-center gap-1 shrink-0 cursor-pointer" onclick="showToast('Samarqand hikoyalari')">
+<div class="w-14 h-14 rounded-full p-[2px] border border-outline-variant/50 bg-surface-container">
+<img class="w-full h-full rounded-full object-cover" data-alt="Circular photo thumbnail of turquoise dome of Gur-e-Amir in Samarkand with deep blue tiles." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGZXBaF6TCA8g0iV9LAY7myyvCd1jDzjkxJLkdod7LMO31gp8SVGr39cqbj3RdtiionBZH4HyKyA6veFWMrsc-DLNP5yV_Oc1NsCRE0uWWUDCv1mDX8g_oO0HCaFG-vbg_ZtPUKRujV8yHMuQFuUC11DzBmG-GikexaLStEc6oP69AwrkjPPzPHMITd4OQY7EpntMQiNWPinPGqr0R_Cngl4zNQZlLF8NXNTDnSys"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface">Samarqand</span>
+</div>
+<div class="flex flex-col items-center gap-1 shrink-0 cursor-pointer" onclick="showToast('Fotoapparat hikoyalari')">
+<div class="w-14 h-14 rounded-full p-[2px] border border-outline-variant/50 bg-surface-container">
+<img class="w-full h-full rounded-full object-cover" data-alt="Close up thumbnail of professional mirrorless camera with prime 50mm lens on wooden desk." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIoamNu6fYhTZ_e9U2sm2R7rtkrCEODU70vfR3Nwq5PkG4j9R95nUgI7xTXtcOVhpSX1WDRsEYd5uqh1OrRpB_ZSo2kdOV7dfS5G9j_5lPzqK_pFtPtLdfiCEodQrn1qPr7tEWoCDKi_oaXKU-BGhgbh9iOpbk4gno9p3UH6dpCPpaB1SA3O4paWS6gf5JU-KGneBXQDWdfo_3BCvhXXhgmHPmL9_zJ-HU000Fwck"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface">Foto/Kamera</span>
+</div>
+<div class="flex flex-col items-center gap-1 shrink-0 cursor-pointer" onclick="showToast('Yangi hikoya to\'plami yaratish')">
+<div class="w-14 h-14 rounded-full border border-dashed border-outline flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-2xl">add</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Yangi</span>
+</div>
+</div>
+</div>
+<!-- Profile Content Tabs (Grid vs Saved) -->
+<div class="border-t border-outline-variant/30 flex items-center">
+<button class="flex-1 py-3 border-b-2 border-primary-container text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">grid_on</span>
+</button>
+<button class="flex-1 py-3 border-b-2 border-transparent text-outline hover:text-on-surface flex items-center justify-center" onclick="showToast('Saqlangan postlar ro\'yxati')">
+<span class="material-symbols-outlined text-2xl">bookmark_border</span>
+</button>
+<button class="flex-1 py-3 border-b-2 border-transparent text-outline hover:text-on-surface flex items-center justify-center" onclick="showToast('Belgilangan postlar')">
+<span class="material-symbols-outlined text-2xl">assignment_ind</span>
+</button>
+</div>
+<!-- 3x3 Continuous Mosaic Profile Gallery -->
+<div class="grid grid-cols-3 gap-gutter-grid">
+<div class="aspect-square bg-surface-container relative group cursor-pointer" onclick="showToast('Post ochildi')">
+<img class="w-full h-full object-cover" data-alt="Vivid landscape photograph of blue alpine mountain lake reflecting sunset skies with pink and violet clouds." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDroWFtEjcnHfLifS5N2aDiIHcSGVuXKD3qqnM-9n7sHPY8LOz4uKLQGpQjmt1JAOWzqo4yEo2VrlaCKRfHAa54GVG-XUbj4kifqWZ7mm8_7CnCnDk3XCgqxfHzIBA-ilc9euTS8FzjF4yqA-hKwFiRswA-kIST5_l7WCkFGXfc3YupnbaGc75Ys29zps5Ier8uqYhYJw1UdsIPN6m57uL-wV1ZQ5SXu6oQ3kX-FB0"/>
+<span class="absolute top-1.5 right-1.5 material-symbols-outlined text-white text-sm drop-shadow">photo_library</span>
+</div>
+<div class="aspect-square bg-surface-container relative group cursor-pointer" onclick="showToast('Post ochildi')">
+<img class="w-full h-full object-cover" data-alt="Dramatic silhouette of a traveler standing on rocky canyon edge during orange sunset in Uzbekistan." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDup_kgRChEIE09Dw6APzIkuWUOsiVKoATOC6TRjZoKUC-QtmXHmgvrr21wEwlO5cK4Dt5IKvS_n-xuISyzjso5pmY5LZ0UQXO1tEWdut_zb1f0bzzhg3p2NCe0jlvDR-t3o108jAOdSJrugrAAuhtrHMAFzfqyNO2en-o0APysM40NPMGQT2YScTIwLGjP9iD2TGJdRNS5YyeLx8ShFAnEqFUS4oVXf9IReuo2iVA"/>
+</div>
+<div class="aspect-square bg-surface-container relative group cursor-pointer" onclick="showToast('Post ochildi')">
+<img class="w-full h-full object-cover" data-alt="Macro portrait of traditional Uzbek Suzani textile pattern with vibrant silk embroidery in red and cobalt blue." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjnNGPXc2RQQB4LP368uztja2W0THQejbN85r7xumXfYIwvHNnl0j7fLgkuSvxqesyBjpBqlbIOeO28aOtWMC17CeHlPuI8m6mqfnGiMUtSqTHmGNnOEk9cZQ5qfTAqfadb5WvuWDSwcEcqInBCim2nAkWKW32SCwi98iwjtE2BuU9OLpuGZLNiaG72hE9vo0M4nGfiV32Qc8hmzVjmFDx8HlhCVksagWkENcTabk"/>
+</div>
+<div class="aspect-square bg-surface-container relative group cursor-pointer" onclick="showToast('Post ochildi')">
+<img class="w-full h-full object-cover" data-alt="Aerial view of serpentine mountain road cutting through lush green valleys under dramatic cloudy sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2rfSXb52IrVMS1qY4EHH5aL463E5PbsPboRE2_daN7goFKNqm5U_9lHzxAC26k5v5GIGMMntmP31yXOt004CK1CZAwAv7AlIybq8f5DRpDOMJBMM9DD6SlF8u4Iwgk68P1BFPXfJksJCfiD35_AvSZMTYOBscs8RjpDGLYs9GR_p3GEvABWkJlV2peCkyM3MBa7VkFaqYW1sD6KOJHcjiRtqvNDCJkz30-xRNToM"/>
+</div>
+<div class="aspect-square bg-surface-container relative group cursor-pointer" onclick="showToast('Post ochildi')">
+<img class="w-full h-full object-cover" data-alt="Cozy wooden cabin illuminated with warm fairy lights in pine forest during twilight snow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-mHkB_rHnTH_tHfiGxOTB52pbHbi0W--V3EiOCG0l66kk8atpjkiQr0hp2iI4fHGmf-MWVJk8l8AzqLxrKAJ1ujMFQiGUZLoNjCjCqzxxURsO84U8d-sv_7WN_wlG1SZ6zIj6pHh8G_QABX63uZtBJ6YsMnOiZOzHJTn1t9eM96oZ676KVQ-g-WkZ8aI_iRgqo--UKhiQMLs61dtCESpWY2awBcevWGf1YX33ckE"/>
+</div>
+<div class="aspect-square bg-surface-container relative group cursor-pointer" onclick="showToast('Post ochildi')">
+<img class="w-full h-full object-cover" data-alt="Scenic historical streets of Khiva Ichan-Kala minarets glowing under starry night sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK0GHv4A8Q5YRzCpARaVZaDwIhfjsprnGfTlaGG5rpflq4Rqb-TtQI7nmfMWwZ4XFcIKJfKxBfbp-H1CvMm3ChQTG6ZTIsyxdXS-FGILoFL5GUscWQc7NKzSXwfajoZ63W5SU0PwqSZxIcD5NuyDyFg4zRHP3iwX5MbGJXwkRxbBWVMog5vNofadZndchm8yffGFCvrbf1h6CY2dgp0kdDCT0DL_ggwhBcqlJLa88"/>
+</div>
+<div class="aspect-square bg-surface-container relative group cursor-pointer" onclick="showToast('Post ochildi')">
+<img class="w-full h-full object-cover" data-alt="Campfire glowing at night under the Milky Way galaxy in Zaamin national park." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIsAVn15Tzxi8A_7cKAGv3ro1VWv24_pLlYx9b2AFB9PyEyuYCNW413oZoNmZVs8FxhgkjiMCqrY-iVIs0pv7aW1uNhUbiGah8DHF_c3KTlUi66j5aZA432IpIdPn5eCCqRKZGhi1iaioGgT3WuhdbsJhDvWwEPa2Mq8_YJ_ExndusRRriseXQeU6Du4fU5EM5Qg9ee4WCCfl2J4cK2nR62aLbLXChIb77bEFMvW0"/>
+</div>
+<div class="aspect-square bg-surface-container relative group cursor-pointer" onclick="showToast('Post ochildi')">
+<img class="w-full h-full object-cover" data-alt="Modern geometric glass building facade reflection in rain puddle at twilight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJIdKAp2EWvIQQ7OZt_tv-O9lyj5OdcYdtzqFDt8m1IzpZ6chSA7wWQGxns0RdmYUQAOM-LKDCsn699vw8rPDQ1Jw8oGA3rXH2jRJdJ4p9W64tlvynglpzpJCTBKanwnbKxToj5jHh9IL5Hz_4GA0DEAdIcdfu5wsfHL_M2OmiwHFP11kX6Y9N-YdSE4-6QUEKUhDOSRJeYW7ootGQeFXVI0uoMNDtaCYE8vgic_M"/>
+</div>
+<div class="aspect-square bg-surface-container relative group cursor-pointer" onclick="showToast('Post ochildi')">
+<img class="w-full h-full object-cover" data-alt="Traditional hot samarkand bread fresh from tandir oven with sesame seeds." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzUwiUp3qMxaSX0UqaZ133TkZba2oyN1KPfGGyklA4mQEwbPZ2pSAJOgDMgl-tV3vprwq6yXFNSTly8CiWMPIIybonq094_AdYvpEIrW83E4a9o5Hhj7ihancCz8ffN5mAOaJ9yLm4e67HEdpPdsZW6hNZH8SSbTYEI1bwUef3xHVjaSOUAfInX21SoWbcrhPUU7p59Sp7rLMfWFDbaJSNRrV78U8SRsIdp4f0VV0"/>
+</div>
+</div>
+</section>
+</main>
+<!-- ========================================== -->
+<!-- BOTTOM NAVIGATION BAR (Per Shared Component Specification) -->
+<!-- Icons: ["home", "search", "add_box", "movie", "person"] -->
+<!-- ========================================== -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-14 px-margin-compact bg-surface-container-lowest/80 backdrop-blur-md border-t border-outline-variant/30 max-w-md mx-auto" id="bottom-dock">
+<!-- Tab: Home -->
+<button class="flex flex-col items-center justify-center text-primary dark:text-primary active:scale-90 transition-transform duration-150 p-2" id="nav-btn-home" onclick="switchTab('home')">
+<span class="material-symbols-outlined text-2xl nav-icon fill">home</span>
+<span class="w-1 h-1 rounded-full bg-primary-container mt-0.5 nav-dot"></span>
+</button>
+<!-- Tab: Search -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary active:scale-90 transition-transform duration-150 p-2" id="nav-btn-search" onclick="switchTab('search')">
+<span class="material-symbols-outlined text-2xl nav-icon">search</span>
+<span class="w-1 h-1 rounded-full bg-transparent mt-0.5 nav-dot"></span>
+</button>
+<!-- Tab: Add/Create -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary active:scale-90 transition-transform duration-150 p-2" onclick="triggerCreatePostModal()">
+<div class="w-8 h-8 rounded-lg bg-sunset-gradient flex items-center justify-center text-white shadow-md shadow-primary-container/30">
+<span class="material-symbols-outlined text-2xl">add_box</span>
+</div>
+<span class="w-1 h-1 rounded-full bg-transparent mt-0.5"></span>
+</button>
+<!-- Tab: Reels -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary active:scale-90 transition-transform duration-150 p-2" id="nav-btn-reels" onclick="switchTab('reels')">
+<span class="material-symbols-outlined text-2xl nav-icon">movie</span>
+<span class="w-1 h-1 rounded-full bg-transparent mt-0.5 nav-dot"></span>
+</button>
+<!-- Tab: Profile -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary active:scale-90 transition-transform duration-150 p-2" id="nav-btn-profile" onclick="switchTab('profile')">
+<span class="material-symbols-outlined text-2xl nav-icon">person</span>
+<span class="w-1 h-1 rounded-full bg-transparent mt-0.5 nav-dot"></span>
+</button>
+</nav>
+</div>
+<!-- ========================================== -->
+<!-- INTERACTIVE COMMENT DRAWER / MODAL -->
+<!-- ========================================== -->
+<div class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex flex-col justify-end" id="comment-drawer">
+<div class="bg-surface-container rounded-t-2xl max-h-[663px] flex flex-col p-4 border-t border-outline-variant/40 animate-slide-up">
+<!-- Drawer Handle -->
+<div class="w-12 h-1.5 rounded-full bg-outline/40 mx-auto mb-3 cursor-pointer" onclick="closeCommentDrawer()"></div>
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant/20">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Izohlar</h3>
+<button class="text-outline hover:text-on-surface" onclick="closeCommentDrawer()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Comments List -->
+<div class="flex-1 overflow-y-auto no-scrollbar py-3 space-y-4" id="comments-container">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Portrait of an energetic user commenting on social feed." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsmjt-ejE5Ot681ww52hnfn-PpKLiLAK-Gq2KdsrTKh0q94CswYFNdkCEzf3lPViJCvWF7r6OZx1Gf4g7o_rDysIyWk5nUYaBNT0VFP6I9KHhtXinkku3jcNLVA2q-gUOXfU-wANpeUPqDcSw8s1lEttWmALyuC2jIFJrYhYXRRgu3YhkPvldSAC2E0yzD-xgugfcnFCcbYNXB47w-EVZGKEulARvUyQ5NnWCG5NY"/>
+</div>
+<div class="flex-1 text-body-sm font-body-sm">
+<span class="font-bold text-on-surface mr-1">kamron_uz:</span>
+<span class="text-on-surface/90">Ajoyib kadr! Ranglar jilosi haqiqatdan ham hayratlanarli 🔥</span>
+<div class="flex items-center gap-3 text-outline text-xs mt-1">
+<span>45 daqiqa oldin</span>
+<button class="hover:text-primary">Javob berish</button>
+</div>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Avatar portrait of an art enthusiast girl smiling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbNOnQVpyzIujUxSi2JlwVlEhPEUbhZWAlSr-0hDLYWBd5ZqDhh5SKxLofeKZbBvBNJX3K2u8W2sQvnVc567vG6SF1HvifaSZUuTDbB5BnMFegRa4T-zTZWVPf3UaQGHVgTpJ3FrtljyPemm1pUR86YuByy_TNthBXMfYq398cXpFTXCv3guAN2WCvSC8lSaHqzfIbjQ494Sq_HAFCBeeEZChy3m3OQxgYtaskTgM"/>
+</div>
+<div class="flex-1 text-body-sm font-body-sm">
+<span class="font-bold text-on-surface mr-1">madina_designer:</span>
+<span class="text-on-surface/90">Keyingi safar biz ham boramiz InshaAllah! 👏⛰️</span>
+<div class="flex items-center gap-3 text-outline text-xs mt-1">
+<span>1 soat oldin</span>
+<button class="hover:text-primary">Javob berish</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Emojis -->
+<div class="flex items-center justify-around py-2 border-t border-outline-variant/20">
+<button class="text-xl active:scale-125 transition-transform" onclick="insertEmoji('❤️')">❤️</button>
+<button class="text-xl active:scale-125 transition-transform" onclick="insertEmoji('🔥')">🔥</button>
+<button class="text-xl active:scale-125 transition-transform" onclick="insertEmoji('👏')">👏</button>
+<button class="text-xl active:scale-125 transition-transform" onclick="insertEmoji('😍')">😍</button>
+<button class="text-xl active:scale-125 transition-transform" onclick="insertEmoji('🏔️')">🏔️</button>
+<button class="text-xl active:scale-125 transition-transform" onclick="insertEmoji('✨')">✨</button>
+</div>
+<!-- Input Bar -->
+<div class="flex items-center gap-2 pt-2">
+<input class="flex-1 bg-surface-container-high rounded-full px-4 py-2 text-body-sm font-body-sm text-on-surface placeholder:text-outline border-none focus:ring-1 focus:ring-primary-container" id="new-comment-input" placeholder="Izoh yozing..." type="text"/>
+<button class="text-sunset-gradient font-bold text-label-md px-3 py-1 hover:opacity-80 active:scale-95 transition-all" onclick="submitNewComment()">
+            Ulashish
+          </button>
+</div>
+</div>
+</div>
+<!-- ========================================== -->
+<!-- TOAST NOTIFICATION POPUP -->
+<!-- ========================================== -->
+<div class="fixed top-16 left-1/2 -translate-x-1/2 z-50 bg-surface-container-highest/90 text-white backdrop-blur-md px-4 py-2 rounded-full font-label-md text-label-md shadow-xl border border-outline-variant/40 opacity-0 pointer-events-none transition-all duration-300" id="toast-msg">
+      Xabar matni
+    </div>
+</div>
+<!-- ========================================== -->
+<!-- CLIENT INTERACTIVITY SCRIPT -->
+<!-- ========================================== -->
+<script>
+    let currentAuthMode = 'signup';
+    let currentUser = {
+      name: "Jasur Bekmirzayev",
+      username: "jasur_travel",
+      followers: "14.2K",
+      posts: 54
+    };
+
+    // Toggle between Sign Up and Sign In views
+    function toggleAuthMode(mode) {
+      currentAuthMode = mode;
+      const btnSignup = document.getElementById('btn-tab-signup');
+      const btnSignin = document.getElementById('btn-tab-signin');
+      const fieldFullname = document.getElementById('field-fullname');
+      const fieldUsername = document.getElementById('field-username');
+      const btnAction = document.getElementById('btn-auth-action');
+      const btnForgot = document.getElementById('btn-forgot-pass');
+
+      if (mode === 'signup') {
+        btnSignup.className = "flex-1 py-2 text-center rounded-md font-label-md text-label-md text-white bg-primary-container transition-all";
+        btnSignin.className = "flex-1 py-2 text-center rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all";
+        fieldFullname.classList.remove('hidden');
+        fieldUsername.classList.remove('hidden');
+        btnForgot.classList.add('hidden');
+        btnAction.querySelector('span:first-child').textContent = "Ro'yxatdan o'tish";
+      } else {
+        btnSignin.className = "flex-1 py-2 text-center rounded-md font-label-md text-label-md text-white bg-primary-container transition-all";
+        btnSignup.className = "flex-1 py-2 text-center rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all";
+        fieldFullname.classList.add('hidden');
+        fieldUsername.classList.add('hidden');
+        btnForgot.classList.remove('hidden');
+        btnAction.querySelector('span:first-child').textContent = "Tizimga kirish";
+      }
+    }
+
+    // Toggle Password Visibility
+    function togglePasswordVis() {
+      const passInput = document.getElementById('input-password');
+      const eyeIcon = document.getElementById('eye-icon');
+      if (passInput.type === 'password') {
+        passInput.type = 'text';
+        eyeIcon.textContent = 'visibility_off';
+      } else {
+        passInput.type = 'password';
+        eyeIcon.textContent = 'visibility';
+      }
+    }
+
+    // Handle Authentication Submit
+    function handleAuthSubmit(e) {
+      e.preventDefault();
+      const fullname = document.getElementById('input-fullname').value;
+      const username = document.getElementById('input-username').value;
+      
+      if (currentAuthMode === 'signup' && fullname) {
+        currentUser.name = fullname;
+        currentUser.username = username ? username.replace('@', '') : 'user_uz';
+      }
+      
+      // Update profile screen dynamically
+      document.getElementById('profile-display-name').textContent = currentUser.name;
+      document.getElementById('profile-display-handle').textContent = '@' + currentUser.username;
+
+      // Transition to Main App View
+      showToast(currentAuthMode === 'signup' ? "Muvaffaqiyatli ro'yxatdan o'tdingiz!" : "Tizimga muvaffaqiyatli kirildi!");
+      
+      setTimeout(() => {
+        document.getElementById('auth-view').classList.add('hidden');
+        document.getElementById('main-app').classList.remove('hidden');
+        switchTab('home');
+      }, 400);
+    }
+
+    // Quick Social Login
+    function handleQuickLogin(provider) {
+      showToast(`${provider} orqali tezkor kirish amalga oshirildi`);
+      setTimeout(() => {
+        document.getElementById('auth-view').classList.add('hidden');
+        document.getElementById('main-app').classList.remove('hidden');
+        switchTab('home');
+      }, 500);
+    }
+
+    // Logout and return to Auth Flow
+    function handleLogout() {
+      if (confirm("Haqiqatan ham Salo Social akkauntingizdan chiqmoqchimisiz?")) {
+        document.getElementById('main-app').classList.add('hidden');
+        document.getElementById('auth-view').classList.remove('hidden');
+        showToast("Tizimdan chiqildi");
+      }
+    }
+
+    // Tab Navigation Logic
+    function switchTab(tabId) {
+      // Hide all tabs
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+
+      // Deactivate all navigation items
+      const navIds = ['home', 'search', 'reels', 'profile'];
+      navIds.forEach(id => {
+        const btn = document.getElementById(`nav-btn-${id}`);
+        if (btn) {
+          btn.className = "flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary active:scale-90 transition-transform duration-150 p-2";
+          const icon = btn.querySelector('.nav-icon');
+          if (icon) icon.classList.remove('fill');
+          const dot = btn.querySelector('.nav-dot');
+          if (dot) dot.classList.replace('bg-primary-container', 'bg-transparent');
+        }
+      });
+
+      // Activate selected tab & nav button
+      let targetSection = 'tab-feed';
+      if (tabId === 'search') targetSection = 'tab-search';
+      if (tabId === 'reels') targetSection = 'tab-reels';
+      if (tabId === 'profile') targetSection = 'tab-profile';
+
+      const content = document.getElementById(targetSection);
+      if (content) content.classList.remove('hidden');
+
+      const activeBtn = document.getElementById(`nav-btn-${tabId}`);
+      if (activeBtn) {
+        activeBtn.className = "flex flex-col items-center justify-center text-primary dark:text-primary active:scale-90 transition-transform duration-150 p-2";
+        const icon = activeBtn.querySelector('.nav-icon');
+        if (icon) icon.classList.add('fill');
+        const dot = activeBtn.querySelector('.nav-dot');
+        if (dot) dot.classList.replace('bg-transparent', 'bg-primary-container');
+      }
+
+      // Scroll to top when switching
+      const main = document.querySelector('main');
+      if (main) main.scrollTop = 0;
+    }
+
+    // Post Like Toggle Interaction
+    function toggleLikePost(postId) {
+      const heartIcon = document.getElementById(`like-icon-${postId}`);
+      const countEl = document.getElementById(`like-count-${postId}`);
+      const animHeart = document.getElementById(`heart-anim-${postId}`);
+
+      let currentVal = parseInt(countEl.textContent.replace(/,/g, ''));
+
+      if (heartIcon.classList.contains('fill')) {
+        heartIcon.classList.remove('fill', 'text-primary-container');
+        countEl.textContent = (currentVal - 1).toLocaleString();
+      } else {
+        heartIcon.classList.add('fill', 'text-primary-container');
+        countEl.textContent = (currentVal + 1).toLocaleString();
+        
+        // Double-tap pop animation
+        if (animHeart) {
+          animHeart.classList.remove('opacity-0', 'scale-50');
+          animHeart.classList.add('opacity-100', 'scale-125');
+          setTimeout(() => {
+            animHeart.classList.remove('opacity-100', 'scale-125');
+            animHeart.classList.add('opacity-0', 'scale-50');
+          }, 600);
+        }
+      }
+    }
+
+    // Bookmark Toggle
+    function toggleBookmark(id) {
+      const icon = document.getElementById(`bookmark-icon-${id}`);
+      if (icon.textContent === 'bookmark') {
+        icon.textContent = 'bookmark_border';
+        showToast("Saqlanganlardan olib tashlandi");
+      } else {
+        icon.textContent = 'bookmark';
+        showToast("Post saqlandi!");
+      }
+    }
+
+    // Reel Likes
+    function toggleReelLike(btn) {
+      const heart = btn.querySelector('.reel-heart');
+      const num = btn.querySelector('.reel-like-num');
+      if (heart.classList.contains('fill')) {
+        heart.classList.remove('fill', 'text-primary-container');
+        num.textContent = "124.8K";
+      } else {
+        heart.classList.add('fill', 'text-primary-container');
+        num.textContent = "124.9K";
+      }
+    }
+
+    function toggleReelBookmark(btn) {
+      const icon = btn.querySelector('.reel-bookmark-icon');
+      if (icon.classList.contains('fill')) {
+        icon.classList.remove('fill', 'text-white');
+      } else {
+        icon.classList.add('fill', 'text-white');
+        showToast("Reel saqlandi!");
+      }
+    }
+
+    function toggleReelFollow(btn) {
+      if (btn.textContent.trim() === 'Kuzatish') {
+        btn.textContent = 'Kuzatilmoqda';
+        btn.classList.add('bg-white', 'text-black');
+      } else {
+        btn.textContent = 'Kuzatish';
+        btn.classList.remove('bg-white', 'text-black');
+      }
+    }
+
+    // Comment Drawer Interactions
+    function openCommentDrawer(user) {
+      document.getElementById('comment-drawer').classList.remove('hidden');
+    }
+
+    function closeCommentDrawer() {
+      document.getElementById('comment-drawer').classList.add('hidden');
+    }
+
+    function insertEmoji(char) {
+      const input = document.getElementById('new-comment-input');
+      input.value += char;
+      input.focus();
+    }
+
+    function submitNewComment() {
+      const input = document.getElementById('new-comment-input');
+      if (!input.value.trim()) return;
+
+      const container = document.getElementById('comments-container');
+      const commentDiv = document.createElement('div');
+      commentDiv.className = "flex items-start gap-3";
+      commentDiv.innerHTML = `
+        <div class="w-8 h-8 rounded-full bg-primary-container shrink-0 flex items-center justify-center text-white text-xs font-bold">
+          ${currentUser.name[0]}
+        </div>
+        <div class="flex-1 text-body-sm font-body-sm">
+          <span class="font-bold text-on-surface mr-1">${currentUser.username}:</span>
+          <span class="text-on-surface/90">${escapeHTML(input.value)}</span>
+          <div class="flex items-center gap-3 text-outline text-xs mt-1">
+            <span>Hozirgina</span>
+          </div>
+        </div>
+      `;
+      container.appendChild(commentDiv);
+      input.value = '';
+      container.scrollTop = container.scrollHeight;
+    }
+
+    function escapeHTML(str) {
+      return str.replace(/[&<>'"]/g, 
+        tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+      );
+    }
+
+    // Toast Utility
+    let toastTimeout;
+    function showToast(text) {
+      const toast = document.getElementById('toast-msg');
+      toast.textContent = text;
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      toast.classList.add('opacity-100');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0', 'pointer-events-none');
+      }, 2400);
+    }
+
+    function sharePost(name) {
+      showToast(`${name} havolasi nusxalandi!`);
+    }
+
+    function openStoryModal(name) {
+      showToast(`${name} hikoyasi ochilmoqda...`);
+    }
+
+    function triggerCreatePostModal() {
+      showToast("Yangi fotosurat yoki video yuklash oynasi");
+    }
+
+    function filterExplore(btn) {
+      const container = btn.parentElement;
+      container.querySelectorAll('button').forEach(b => {
+        b.className = "px-3.5 py-1 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface-variant text-label-md font-label-md shrink-0";
+      });
+      btn.className = "px-3.5 py-1 rounded-full bg-sunset-gradient text-white text-label-md font-label-md shrink-0";
+      showToast(`${btn.textContent} kategoriyasi filtrlari`);
+    }
+  </script>
+
+<script>
+(() => {
+  const STORE = 'salo_social_frontend_v2';
+  const state = JSON.parse(localStorage.getItem(STORE) || '{"posts":[],"following":[],"saved":[],"comments":{},"profile":{}}');
+  let activeCommentPost = null;
+  let reelPage = 0;
+  let reelItems = [];
+  let reelObserver = null;
+
+  const demoReels = [
+    {src:'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4', user:'@salo_creator', caption:'Tabiatning go‘zalligi 🌸 #nature'},
+    {src:'https://media.w3.org/2010/05/sintel/trailer.mp4', user:'@video_world', caption:'Kino olamidan lavha 🎬 #video'},
+    {src:'https://media.w3.org/2010/05/bunny/trailer.mp4', user:'@fun_reels', caption:'Qiziqarli video 🐰 #fun'}
+  ];
+
+  function persist() {
+    try { localStorage.setItem(STORE, JSON.stringify(state)); }
+    catch(e) { showToast('Xotira to‘ldi. Ba’zi eski postlarni o‘chiring.'); }
+  }
+  function safe(text) {
+    return String(text ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+  }
+  function me() {
+    return {
+      name: state.profile.name || currentUser.name || 'Salo User',
+      username: state.profile.username || currentUser.username || 'salo_user'
+    };
+  }
+
+  // Add working create-post dialog.
+  function ensureCreateDialog() {
+    if (document.getElementById('ss-create-modal')) return;
+    const modal = document.createElement('div');
+    modal.id = 'ss-create-modal';
+    modal.className = 'hidden fixed inset-0 z-[100] bg-black/75 backdrop-blur-sm items-center justify-center p-4';
+    modal.innerHTML = `
+      <div class="w-full max-w-sm rounded-2xl p-5 bg-surface-container border border-outline-variant/40 text-on-surface">
+        <div class="flex justify-between items-center mb-4">
+          <h3 class="text-lg font-bold">Yangi ulashuv</h3>
+          <button type="button" onclick="closeCreatePostModal()" class="text-2xl">×</button>
+        </div>
+        <label class="block text-sm mb-1 text-on-surface-variant">Ulashuv turi</label>
+        <select id="ss-create-type" class="w-full rounded-lg p-3 mb-3 bg-surface-container-high text-on-surface border-0">
+          <option value="post">Post (rasm)</option><option value="reel">Reels (video)</option><option value="story">Hikoya (rasm)</option>
+        </select>
+        <input id="ss-create-file" type="file" accept="image/*" class="w-full text-sm mb-3">
+        <textarea id="ss-create-caption" rows="3" placeholder="Nimalarni ulashmoqchisiz?" class="w-full rounded-lg p-3 mb-3 bg-surface-container-high text-on-surface border-0"></textarea>
+        <button type="button" onclick="publishSaloContent()" class="w-full rounded-xl p-3 font-bold text-white bg-sunset-gradient">Ulashish</button>
+        <p class="text-xs text-outline mt-3">Bu frontend versiya. Post va profil ma’lumotlari ushbu brauzerda saqlanadi.</p>
+      </div>`;
+    document.body.appendChild(modal);
+    document.getElementById('ss-create-type').addEventListener('change', updateCreateAccept);
+    updateCreateAccept();
+  }
+  function updateCreateAccept() {
+    const type = document.getElementById('ss-create-type').value;
+    const input = document.getElementById('ss-create-file');
+    input.accept = type === 'reel' ? 'video/*' : 'image/*';
+    input.value = '';
+  }
+  window.triggerCreatePostModal = function() {
+    ensureCreateDialog();
+    const modal = document.getElementById('ss-create-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  };
+  window.closeCreatePostModal = function() {
+    const modal = document.getElementById('ss-create-modal');
+    if (modal) { modal.classList.add('hidden'); modal.classList.remove('flex'); }
+  };
+
+  function compressImage(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onerror = reject;
+      reader.onload = () => {
+        const img = new Image();
+        img.onerror = reject;
+        img.onload = () => {
+          const max = 1100, scale = Math.min(1, max / Math.max(img.width, img.height));
+          const canvas = document.createElement('canvas');
+          canvas.width = Math.round(img.width * scale);
+          canvas.height = Math.round(img.height * scale);
+          canvas.getContext('2d').drawImage(img, 0, 0, canvas.width, canvas.height);
+          resolve(canvas.toDataURL('image/jpeg', 0.78));
+        };
+        img.src = reader.result;
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+
+  window.publishSaloContent = async function() {
+    const type = document.getElementById('ss-create-type').value;
+    const file = document.getElementById('ss-create-file').files[0];
+    const caption = document.getElementById('ss-create-caption').value.trim();
+    if (!file) return showToast('Avval rasm yoki video tanlang');
+    if (type === 'reel' && !file.type.startsWith('video/')) return showToast('Reels uchun video tanlang');
+    if (type !== 'reel' && !file.type.startsWith('image/')) return showToast('Bu bo‘lim uchun rasm tanlang');
+
+    const user = me();
+    if (type === 'reel') {
+      const url = URL.createObjectURL(file);
+      reelItems.unshift({src:url,user:'@'+user.username,caption:caption || 'Yangi video',local:true});
+      renderReels(true);
+      switchTab('reels');
+      showToast('Reels qo‘shildi! Video shu oynada ishlaydi.');
+    } else {
+      try {
+        const image = await compressImage(file);
+        const item = {id:'p'+Date.now(), user:user.username, name:user.name, caption, image, likes:0, liked:false, created:Date.now(), story:type==='story'};
+        if (type === 'story') {
+          const tray = document.querySelector('#tab-feed .overflow-x-auto');
+          if (tray) {
+            const story = document.createElement('div');
+            story.className = 'flex flex-col items-center shrink-0 cursor-pointer';
+            story.innerHTML = `<div class="story-ring-active p-[2px] rounded-full"><img class="w-16 h-16 rounded-full object-cover" src="${image}"></div><span class="text-xs mt-1">${safe(user.username)}</span>`;
+            tray.appendChild(story);
+          }
+          showToast('Hikoya qo‘shildi!');
+        } else {
+          state.posts.unshift(item); persist(); renderPosts();
+          showToast('Postingiz lentaga qo‘shildi!');
+        }
+      } catch(e) { showToast('Rasmni yuklashda xatolik yuz berdi'); }
+    }
+    document.getElementById('ss-create-caption').value = '';
+    closeCreatePostModal();
+  };
+
+  function postMarkup(p) {
+    const liked = !!p.liked;
+    const saved = state.saved.includes(p.id);
+    return `<article class="border-b border-outline-variant/30 pb-4" data-post-id="${safe(p.id)}">
+      <div class="flex items-center justify-between px-4 py-3">
+        <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-sunset-gradient flex items-center justify-center font-bold text-white">${safe((p.name||p.user||'S')[0].toUpperCase())}</div>
+        <div><div class="font-bold">${safe(p.user.startsWith('@')?p.user:'@'+p.user)}</div><div class="text-xs text-outline">Hozirgina</div></div></div>
+        <button onclick="deleteSaloPost('${safe(p.id)}')" class="text-outline p-2">•••</button>
+      </div>
+      <img src="${p.image}" class="w-full aspect-square object-cover bg-surface-container" alt="Post rasmi">
+      <div class="px-4 pt-3">
+        <div class="flex items-center justify-between">
+          <div class="flex gap-4">
+            <button onclick="toggleSaloPostLike('${safe(p.id)}')" class="${liked?'text-primary-container':''} text-2xl">${liked?'♥':'♡'}</button>
+            <button onclick="openSaloComments('${safe(p.id)}')" class="text-2xl">▢</button>
+            <button onclick="sharePost('${safe(p.user)}')" class="text-2xl">➤</button>
+          </div>
+          <button onclick="toggleSaloSave('${safe(p.id)}')" class="text-2xl">${saved?'🔖':'♧'}</button>
+        </div>
+        <div class="text-sm font-bold mt-2">${Number(p.likes||0).toLocaleString()} ta yoqtirish</div>
+        <p class="text-sm mt-1"><b>@${safe(p.user)}</b> ${safe(p.caption||'')}</p>
+        <button onclick="openSaloComments('${safe(p.id)}')" class="text-xs text-outline mt-2">Izohlarni ko‘rish / yozish</button>
+      </div></article>`;
+  }
+  function renderPosts() {
+    const feed = document.getElementById('tab-feed');
+    if (!feed) return;
+    let area = document.getElementById('ss-user-posts');
+    if (!area) {
+      area = document.createElement('div');
+      area.id = 'ss-user-posts';
+      feed.appendChild(area);
+    }
+    area.innerHTML = state.posts.filter(p=>!p.story).map(postMarkup).join('');
+    renderProfilePosts();
+  }
+  window.toggleSaloPostLike = function(id) {
+    const p = state.posts.find(x=>x.id===id); if (!p) return;
+    p.liked = !p.liked; p.likes = Math.max(0,(p.likes||0)+(p.liked?1:-1)); persist(); renderPosts();
+  };
+  window.toggleSaloSave = function(id) {
+    state.saved = state.saved.includes(id) ? state.saved.filter(x=>x!==id) : [...state.saved,id];
+    persist(); renderPosts(); showToast(state.saved.includes(id)?'Post saqlandi':'Saqlanganlardan olindi');
+  };
+  window.deleteSaloPost = function(id) {
+    if (!confirm('Postingizni o‘chirmoqchimisiz?')) return;
+    state.posts = state.posts.filter(p=>p.id!==id); persist(); renderPosts();
+  };
+  function renderProfilePosts() {
+    const profile = document.querySelector('#tab-profile .grid.grid-cols-3');
+    if (!profile) return;
+    const mine = state.posts.filter(p=>!p.story);
+    if (mine.length) profile.innerHTML = mine.map(p=>`<div class="aspect-square"><img class="w-full h-full object-cover" src="${p.image}"></div>`).join('');
+  }
+
+  window.openSaloComments = function(id) {
+    activeCommentPost = id;
+    const p = state.posts.find(x=>x.id===id);
+    const box = document.getElementById('comments-container');
+    if (box) {
+      box.innerHTML = (state.comments[id]||[]).map(c=>`<div class="text-sm py-2"><b>@${safe(c.user)}</b> ${safe(c.text)}</div>`).join('') || '<p class="text-sm text-outline">Hozircha izoh yo‘q. Birinchi bo‘lib izoh yozing!</p>';
+    }
+    document.getElementById('comment-drawer').classList.remove('hidden');
+  };
+  const oldSubmitComment = window.submitNewComment;
+  window.submitNewComment = function() {
+    const input = document.getElementById('new-comment-input');
+    if (!input || !input.value.trim()) return;
+    if (!activeCommentPost) { if (oldSubmitComment) oldSubmitComment(); return; }
+    state.comments[activeCommentPost] ||= [];
+    state.comments[activeCommentPost].push({user:me().username,text:input.value.trim()});
+    persist();
+    const box = document.getElementById('comments-container');
+    box.innerHTML = state.comments[activeCommentPost].map(c=>`<div class="text-sm py-2"><b>@${safe(c.user)}</b> ${safe(c.text)}</div>`).join('');
+    input.value = '';
+  };
+
+  // Infinite Reels: a new batch is appended whenever the viewer nears the end.
+  function reelCard(r, index) {
+    return `<article class="relative h-full min-h-[calc(100dvh-112px)] snap-start bg-black text-white overflow-hidden">
+      <video class="absolute inset-0 w-full h-full object-cover" src="${r.src}" playsinline loop muted controls preload="metadata"></video>
+      <div class="absolute inset-0 pointer-events-none bg-gradient-to-b from-black/40 via-transparent to-black/80"></div>
+      <div class="absolute top-4 left-4 right-4 flex justify-between items-center z-10"><b class="text-xl">Reels</b><span class="text-xs bg-black/40 rounded-full px-3 py-1">${index+1}</span></div>
+      <div class="absolute right-3 bottom-24 z-20 flex flex-col gap-5 items-center">
+        <button onclick="this.classList.toggle('text-primary-container');this.textContent=this.classList.contains('text-primary-container')?'♥':'♡'" class="text-3xl">♡</button>
+        <button onclick="showToast('Izohlar uchun postlar bo‘limidan foydalaning')" class="text-2xl">▢</button>
+        <button onclick="sharePost('Reels')" class="text-2xl">➤</button>
+        <button onclick="showToast('Reels saqlandi')" class="text-2xl">♧</button>
+        <button onclick="toggleSaloFollow(this,'${safe(r.user)}')" class="text-xs border border-white rounded-full px-2 py-1">Kuzatish</button>
+      </div>
+      <div class="absolute bottom-8 left-4 right-20 z-10"><b>${safe(r.user)}</b><p class="text-sm mt-1">${safe(r.caption)}</p><p class="text-xs mt-2 opacity-80">♪ Original audio • Salo Social</p></div>
+    </article>`;
+  }
+  function renderReels(reset=false) {
+    const list = document.getElementById('ss-reels-list'); if (!list) return;
+    if (reset) { list.innerHTML=''; reelPage=0; }
+    const batch = [];
+    for (let i=0;i<5;i++) {
+      const item = reelItems.length ? reelItems[(reelPage*5+i)%reelItems.length] : demoReels[(reelPage*5+i)%demoReels.length];
+      batch.push(reelCard(item,reelPage*5+i));
+    }
+    list.insertAdjacentHTML('beforeend',batch.join(''));
+    reelPage++;
+  }
+  window.toggleSaloFollow = function(btn, username) {
+    const name = username.replace('@','');
+    if (state.following.includes(name)) {
+      state.following=state.following.filter(x=>x!==name); btn.textContent='Kuzatish';
+    } else { state.following.push(name); btn.textContent='Kuzatilmoqda'; }
+    persist();
+  };
+  const reelsList = document.getElementById('ss-reels-list');
+  if (reelsList) {
+    renderReels(true);
+    reelsList.addEventListener('scroll', () => {
+      if (reelsList.scrollTop + reelsList.clientHeight >= reelsList.scrollHeight - 700) renderReels();
+    });
+  }
+
+  // Make search filter the visible feed and profile labels.
+  const searchInput = document.querySelector('#tab-search input[type="text"]');
+  if (searchInput) searchInput.addEventListener('input', () => {
+    const q=searchInput.value.toLowerCase();
+    document.querySelectorAll('#tab-feed article').forEach(a=>a.style.display=a.textContent.toLowerCase().includes(q)?'':'none');
+    document.querySelectorAll('#ss-user-posts article').forEach(a=>a.style.display=a.textContent.toLowerCase().includes(q)?'':'none');
+  });
+
+  // Profile editing dialog.
+  function addProfileEditor() {
+    const profile = document.getElementById('tab-profile');
+    if (!profile || document.getElementById('ss-edit-profile')) return;
+    const button = document.createElement('button');
+    button.id='ss-edit-profile';
+    button.className='mx-4 mb-4 w-[calc(100%-2rem)] rounded-lg py-2 bg-surface-container-high text-sm font-bold';
+    button.textContent='Profilni tahrirlash';
+    button.onclick=()=>{
+      const name=prompt('Ismingiz:',me().name); if(name===null)return;
+      const username=prompt('Foydalanuvchi nomi:',me().username); if(username===null)return;
+      state.profile={name:name.trim()||me().name,username:username.trim().replace(/^@/,'')||me().username};
+      currentUser.name=state.profile.name; currentUser.username=state.profile.username;
+      const n=document.getElementById('profile-display-name'), h=document.getElementById('profile-display-handle');
+      if(n)n.textContent=state.profile.name;if(h)h.textContent='@'+state.profile.username;
+      persist(); showToast('Profil yangilandi');
+    };
+    profile.insertBefore(button,profile.children[1]||null);
+  }
+
+  // Existing likes/bookmarks and follow actions now persist locally.
+  const oldToggleLike = window.toggleLikePost;
+  window.toggleLikePost = function(id) {
+    const icon=document.getElementById(`like-icon-${id}`);
+    const count=document.getElementById(`like-count-${id}`);
+    if(!icon||!count){if(oldToggleLike)oldToggleLike(id);return;}
+    const key='salo_like_'+id, liked=localStorage.getItem(key)==='1';
+    const val=parseInt(count.textContent.replace(/,/g,''),10)||0;
+    icon.classList.toggle('fill',!liked); icon.classList.toggle('text-primary-container',!liked);
+    count.textContent=Math.max(0,val+(liked?-1:1)).toLocaleString();
+    localStorage.setItem(key,liked?'0':'1');
+  };
+  const oldBookmark = window.toggleBookmark;
+  window.toggleBookmark = function(id) {
+    const icon=document.getElementById(`bookmark-icon-${id}`);
+    if(!icon){if(oldBookmark)oldBookmark(id);return;}
+    const key='salo_bookmark_'+id, saved=localStorage.getItem(key)==='1';
+    icon.textContent=saved?'bookmark_border':'bookmark';
+    localStorage.setItem(key,saved?'0':'1');
+    showToast(saved?'Saqlanganlardan olib tashlandi':'Post saqlandi!');
+  };
+
+  // Keep profile name in sync after the existing sign-up demo.
+  const oldAuthSubmit=window.handleAuthSubmit;
+  window.handleAuthSubmit=function(e){
+    if(oldAuthSubmit) oldAuthSubmit(e);
+    setTimeout(()=>{
+      const n=document.getElementById('profile-display-name'),h=document.getElementById('profile-display-handle');
+      if(n)n.textContent=me().name;if(h)h.textContent='@'+me().username;
+    },50);
+  };
+
+  document.addEventListener('DOMContentLoaded',()=>{renderPosts();addProfileEditor();});
+  renderPosts(); addProfileEditor();
+})();
+</script>
+
+</body></html><script async src="/.netlify/scripts/hud?variant=public" data-nf-variant="public" data-netlify-site-id="40486abe-212a-4d2b-9d4c-570a5a50b3fe" data-app-host="app.netlify.com" data-account-tier="free"></script>
